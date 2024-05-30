@@ -56,8 +56,8 @@ class Checkers {
         const hitFrontRight = document.querySelector(`#field-${fieldRow + 1}-${fieldCol + 1}`);
         const hitFrontLeft = document.querySelector(`#field-${fieldRow + 1}-${fieldCol - 1}`);
 
-        const hitBackRight = document.querySelector(`#field-${fieldRow - 1}-${fieldCol + 1}`);
-        const hitBackLeft = document.querySelector(`#field-${fieldRow - 1}-${fieldCol - 1}`);
+        const hitBackRight = document.querySelector(`#field-${hitRow - 1}-${hitCol + 1}`);
+        const hitBackLeft = document.querySelector(`#field-${hitRow - 1}-${hitCol - 1}`);
 
 
         //mert ha ilyen írányba ütünk, akkor az ahonnan le tudnának ütni minket az a mező vagy üres vagy ott a white player-e van 
