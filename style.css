@@ -1,0 +1,99 @@
+@keyframes stepFrom {
+    from {border: 3px solid #d5d5d5;}
+    to {border: 3px solid transparent;}
+}
+
+@keyframes stepTo {
+    from {border: 3px solid #87dd62;}
+    to {border: 3px solid transparent;}
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+.table {
+    height: max(45vw, 500px);
+    width: max(45vw, 500px);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: auto;
+}
+
+.field {
+    border: 1px solid grey;
+    margin: 0 -1px -1px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.player {
+    height: 90%;
+    width: 90%;
+    border-radius: 100%;
+}
+
+.black-player {
+    background: rgb(107, 107, 107);
+    background: linear-gradient(circle, rgba(107, 107, 107,1) 0%, rgba(46, 46, 46,1) 100%);
+    border:1px solid #606060;
+}
+
+.white-player {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(circle, rgba(255, 255, 255,1) 0%, rgba(191, 191, 191, 1) 100%);
+    border: 1px solid grey;
+}
+
+.highlight {
+    border: 3px solid white;
+}
+
+.possible-step {
+    border: 3px solid #87dd62;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 45vw; /*hogy akkora legyen, mint a táblának*/
+    height: 40px;
+    margin: 15px auto; /*hogy kicsit 15px-vel eltávolodjon felülről alulról és az autoval pedig középre tesszük*/
+    text-align: center;
+}
+
+.box {
+    background-color: #f3f3f3;
+    border: 1px solid #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -1px;
+    font-weight: bold;
+}
+
+.step-from {
+    animation-name: stepFrom;
+    animation-duration: .2s;
+    animation-iteration-count: 5;
+}
+
+.step-to {
+    animation-name: stepTo;
+    animation-duration: .2s;
+    animation-iteration-count: 5;
+}
